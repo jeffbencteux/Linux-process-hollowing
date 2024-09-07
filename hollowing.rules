@@ -1,0 +1,4 @@
+# Detect calls to ptrace(PTRACE_GETREGS, ...)
+-a always,exit -S ptrace -F a0=12 -k hollowing_ptrace_getregs
+# Detect calls to ptrace(PTRACE_POKETEXT, ...)
+-a always,exit -S ptrace -F a0=4 -k hollowing_ptrace_poketext
